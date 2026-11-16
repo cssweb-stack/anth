@@ -51,13 +51,8 @@ permalink: "/graduate/applied-archaeology/"
 <div class="row gx-0 gx-sm-5 gx-lg-5">
 <div class="col-12">
 <h2 id="gb-accordion-toggle-563edbfb">Program Faculty</h2>
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4 gx-0 gx-md-5 grid-spaced faculty-portrait-grid">
-{% for person in research_areas['archaeology'].faculty | sort(attribute="lastName") %}
-<div class="col">
-{% include "layouts/profiles/profile-card.njk" %}
-</div>
-{% endfor %}
-</div>
+{% set directoryPeople = research_areas['archaeology'].faculty %}
+{% include "layouts/profiles/people-grid.njk" %}
 <hr>
 <h2>Affiliate Faculty</h2>
 <ul>
