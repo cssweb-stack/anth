@@ -1,0 +1,44 @@
+---
+layout: shell.njk
+title: "Anthropology Emeriti & Retired Faculty"
+description: "Meet Anthropology emeriti and retired faculty at UH Mānoa, find their online resources and view the department’s in memoriam listing."
+permalink: "/faculty/emeriti-faculty.html"
+---
+<div class="page-section">
+<div class="container content-section">
+<div class="row gx-0 gx-sm-5 gx-lg-5">
+<div class="col-12">
+<h1>Anthropology Emeriti &amp; Retired Faculty</h1>
+<p>We honor the contributions of emeriti and retired faculty of the Department of Anthropology, including colleagues remembered in memoriam.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="page-section page-section--gray">
+<div class="container content-section">
+{% set directoryShowOnline = true %}
+{% set profileNameTag = "h3" %}
+{% for group in emeriti_faculty.groups %}
+{% if group.memberSlugs %}
+{% if group.dividerBefore %}
+<hr>
+{% endif %}
+<h2>{{ group.title | escape }}</h2>
+{% set directoryPeople = group.members | rejectattr("directoryNameOnly") %}
+{% include "layouts/profiles/people-grid.njk" %}
+{% set additionalMembers = group.members | selectattr("directoryNameOnly") %}
+{% if additionalMembers | length %}
+<h3>Additional Emeriti</h3>
+<ul>
+{% for person in additionalMembers %}
+<li>{{ person.name | escape }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+{% endif %}
+{% endfor %}
+{% set facultyGroups = [emeriti_faculty.groups[2]] %}
+{% set facultyDescriptionSeparator = " — " %}
+{% include "layouts/profiles/associated-faculty.njk" %}
+</div>
+</div>

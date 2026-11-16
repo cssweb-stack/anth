@@ -1,0 +1,29 @@
+---
+layout: shell.njk
+title: "Graduate Degrees Awarded"
+description: "Graduate degree records and research from Anthropology master's and doctoral students at the University of Hawaiʻi at Mānoa."
+permalink: "/graduate/degrees-awarded.html"
+---
+{% from "layouts/content/image-text-row.njk" import imageTextRow %}
+<div class="page-section">
+<div class="container content-section">
+<div class="row gx-0 gx-sm-5 gx-lg-5">
+<div class="col-12">
+<h1>Graduate Degrees Awarded</h1>
+<p>Generations of graduate students in the Department of Anthropology at the University of Hawaiʻi at Mānoa have contributed to the study of human lives, cultures, and histories. Their work reflects a longstanding engagement with Hawaiʻi, Asia, and the Pacific, alongside research in communities around the world. These degree records bring together the people and projects behind that continuing tradition of scholarship.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="page-section page-section--gray">
+<div class="container content-section">
+{% call imageTextRow('', tile={label: 'MA', color: 'tile-purple'}) %}
+<h2><a href="https://docs.google.com/spreadsheets/d/1rgdJcAhr1k1dt_QfWaEEoELQT4FfOhKT1xdpgXuoKlk/edit?usp=sharing">Master of Arts (MA) Degree Recipients</a></h2>
+<p>MA degree records extend back to 1930 and include both thesis and non-thesis graduates. Research titles range from archaeological sites, artifacts, and settlement patterns to family life, migration, identity, religion, and health. Studies of material culture, human biology, and relationships with the environment illustrate the varied questions students have pursued through master’s study.</p>
+{% endcall %}
+{% call imageTextRow('', tile={label: 'PhD', color: 'tile-purple'}) %}
+<h2><a href="https://docs.google.com/spreadsheets/d/1ZsnM0gQY_YH0IsA3oWqN37qdbdgc8tELQROLDvWEUeY/edit?usp=sharing">Doctor of Philosophy (PhD) Degree Recipients</a></h2>
+<p>Dissertations recorded since 1967 investigate how societies change, how communities sustain knowledge and traditions, and how people negotiate livelihoods, land, health, and belonging. Research across cultural, archaeological, biological, medical, and ecological anthropology connects detailed studies of communities and landscapes with broader questions about power, human adaptation, and the past. Together, these dissertations document decades of sustained anthropological inquiry.</p>
+{% endcall %}
+</div>
+</div>
